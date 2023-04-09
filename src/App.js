@@ -6,6 +6,13 @@ function App() {
   const [quote, setQuote] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+  // Function to handle sharing quote via WhatsApp
+  const shareViaWhatsapp = () => {
+    const text = `"${quote.content}" - ${quote.author}`; // Format the quote text
+    const shareUrl = `whatsapp://send?text=${encodeURIComponent(text)}`; // Construct the share URL
+    window.open(shareUrl, "_blank"); // Open the share URL in a new tab
+  };
+
   const generateQuote = () => {
     setIsLoading(true);
     fetch(apiUrl)
@@ -46,6 +53,10 @@ function App() {
         <p className="quote-content">{quote.content}</p>
         <span className="quote-author">{quote.author}</span>
       </div>
+
+      <button onClick={shareViaWhatsapp} className="share-whatsapp-btn">
+        Share to WhatsApp
+      </button>
       <button onClick={generateQuote} className="generate-btn">
         generate
       </button>

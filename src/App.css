@@ -37,7 +37,8 @@ body {
 .quote-author{
   font-weight: bold;
 }
-.generate-btn{
+.generate-btn,
+.share-whatsapp-btn{
   cursor: pointer;
   padding: 8px 12px;
   font-size: 20px;
@@ -47,10 +48,12 @@ body {
   background-color: #8C92AC;
   color: #000;
   border-radius: 8px;
+  margin: 8px;
   transition: 0.3s;
 }
 
-.generate-btn:hover{
+.generate-btn:hover,
+.share-whatsapp-btn:hover{
   color: #fff;
   background-color: #696969;
 }
