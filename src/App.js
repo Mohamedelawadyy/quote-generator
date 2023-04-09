@@ -21,7 +21,22 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <p>Loading</p>;
+    return (
+      <div class="lds-default">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
   }
 
   return (
